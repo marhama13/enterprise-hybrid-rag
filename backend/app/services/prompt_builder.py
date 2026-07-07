@@ -5,32 +5,39 @@ class PromptBuilder:
 
         context_text = ""
 
-        for chunk in contexts:
+        for chunk in contexts[:3]:
 
             meta = chunk["metadata"]
 
-            context_text += f"""
-Document : {meta['document_name']}
-Page     : {meta['page_number']}
-Chunk    : {meta['chunk_number']}
+            for i, chunk in enumerate(contexts[:3], start=1):
 
-{chunk['text']}
+                context_text += f"""
+            Context {i}
 
----------------------------------------
-"""
+            {chunk['text']}
+
+            --------------------------------------------------
+            """
 
         return f"""
 You are an Enterprise Knowledge Assistant.
 
-Use ONLY the provided context to answer the question.
+Your job is to answer questions ONLY using the provided context.
 
-If the answer cannot be found in the context, reply exactly:
+Rules:
+1. Use ONLY the provided context.
+2. Do NOT invent or assume information.
+3. If the answer is not present in the context, reply exactly:
+   "I couldn't find this information in the uploaded documents."
+4. Do NOT mention page numbers, chunk numbers, or document names unless the user explicitly asks for them.
+5. If multiple context chunks contain the answer, combine the information into one concise response.
+6. Keep the answer clear, professional, and easy to understand.
 
-"I couldn't find this information in the uploaded documents."
-
-Context:
+==================== CONTEXT ====================
 
 {context_text}
+
+=================================================
 
 Question:
 {question}

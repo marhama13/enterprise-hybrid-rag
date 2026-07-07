@@ -1,4 +1,6 @@
-from fastapi import APIRouter
+import time
+
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
 from app.services.retrieval.hybrid_service import HybridService
@@ -21,33 +23,67 @@ class ChatRequest(BaseModel):
 @router.post("/")
 def chat(request: ChatRequest):
 
-    results = hybrid.search(
-        query=request.question,
-        document_name=request.document_name,
-    )
+    start_time = time.perf_counter()
 
-    prompt = PromptBuilder.build(
-        question=request.question,
-        contexts=results,
-    )
+    try:
 
-    answer = LLMService.generate(prompt)
-
-    sources = []
-
-    for item in results:
-
-        sources.append(
-            {
-                "document": item["metadata"]["document_name"],
-                "page": item["metadata"]["page_number"],
-                "chunk": item["metadata"]["chunk_number"],
-                "score": round(item["rerank_score"], 2),
-            }
+        results = hybrid.search(
+            query=request.question,
+            document_name=request.document_name,
         )
 
-    return {
-        "question": request.question,
-        "answer": answer,
-        "sources": sources,
-    }
+        if not results:
+            return {
+                "question": request.question,
+                "answer": "I couldn't find this information in the uploaded documents.",
+                "sources": [],
+                "response_time": round(
+                    time.perf_counter() - start_time,
+                    2,
+                ),
+            }
+
+        prompt = PromptBuilder.build(
+            question=request.question,
+            contexts=results,
+        )
+
+        answer = LLMService.generate(prompt)
+
+        sources = []
+
+        for item in results:
+
+            sources.append(
+                {
+                    "document": item["metadata"]["document_name"],
+                    "page": item["metadata"]["page_number"],
+                    "chunk": item["metadata"]["chunk_number"],
+                    
+                }
+            )
+
+        response_time = round(
+            time.perf_counter() - start_time,
+            2,
+        )
+
+        print("=" * 60)
+        print("Question :", request.question)
+        print("Retrieved :", len(results), "chunks")
+        print("Time :", response_time, "seconds")
+        print("=" * 60)
+
+        return {
+            "question": request.question,
+            "answer": answer,
+            "sources": sources,
+            "response_time": response_time,
+        }
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=f"Chat service error: {str(e)}",
+        )
