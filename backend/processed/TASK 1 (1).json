@@ -1,0 +1,47 @@
+{
+    "document": "TASK 1 (1).pdf",
+    "total_pages": 2,
+    "total_chunks": 4,
+    "chunks": [
+        {
+            "id": "2a6b9fb6-6d93-4845-9ffa-5a9decd9a6eb",
+            "document_name": "TASK 1 (1).pdf",
+            "page_number": 1,
+            "chunk_number": 1,
+            "text": "Faculty of Engineering and Technology \nB.Tech (CS&E) \nMOOC2 – Core Python \n \nTASK - 1 \n \n \n1. Write a program to create a simple calculator to perform all the arithmetic operators in \npython. \n \nAddition - a+b \nSubtraction - a-b \nMultiplication - a*b \nDivision -a/b \nFloor division – a//b \nModulo – a%b \nPower — a**b \n \nNOTE: Use assignment operators to assign the values to variables like a+=b. \n \n2. Use Comparison and logical operators to perform the below conditions \n \n Ask the user for the bill amount and the number of friends to split the bill with.\n If the number of friends is 0 or more than the bill amount, tell the user to start over.\n If each person's share of the bill is more than 50 Rs, ask the user to enter a smaller \nnumber of friend\n If the above conditions are met, calcu",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "5daa400e-45bc-411d-8edb-f922fd1f4f8c",
+            "document_name": "TASK 1 (1).pdf",
+            "page_number": 1,
+            "chunk_number": 2,
+            "text": "n 50 Rs, ask the user to enter a smaller \nnumber of friend\n If the above conditions are met, calculate the total bill including 20% tax, then divide \nit by the number of friends.\n Round off the final amount per person to two decimal points using the round() \nfunction\n3. Write a program to show the use of bitwise operators \nBitwise AND – & \nBitwise OR – | \nBitwise NOT – ~ \nBitwise XOR – ^ \nBitwise right shift – >> \nBitwise left shift – << \nSpecial operators \n1.Identity operator (is and is not) \n2.Membership operator (in and not in) \n \n \n \n \n \n \n \nelse: \nSAMPLE EXAMPLE \nfruits = [\"apple\", \"banana\", \"cherry\", \"date\"] \n# Check if 'banana' is in the list of fruits \nif \"banana\" in fruits: \nprint(\"Banana is in the list!\")",
+            "char_count": 729,
+            "start_offset": 700,
+            "end_offset": 1429
+        },
+        {
+            "id": "ed173515-4ffa-4499-9ad2-6f6d9e917a55",
+            "document_name": "TASK 1 (1).pdf",
+            "page_number": 1,
+            "chunk_number": 3,
+            "text": "int(\"Banana is in the list!\")",
+            "char_count": 29,
+            "start_offset": 1400,
+            "end_offset": 1429
+        },
+        {
+            "id": "d8610503-cb86-4db5-8f7d-95c0147178bf",
+            "document_name": "TASK 1 (1).pdf",
+            "page_number": 2,
+            "chunk_number": 1,
+            "text": "Faculty of Engineering and Technology \nB.Tech (CS&E) \nMOOC2 – Core Python \n \nprint(\"Banana is not in the list.\") \n \n4. Use of ternary operator in python to find whether the given number is odd or even. \nSyntax: \nvalue_if_true if condition else value_if_false \n \nExample : \na = 10 \nb = 20 \n \n# Using the ternary operator to assign the greater value to 'max_value' \nmax_value = a if a > b else b \n \nprint(\"The greater value is:\", max_value) \n \n5. Write a program to create a Guessing Game \nNote: This program allows the user to guess a number between 1 and 10, providing feedback \nuntil the correct number is guessed using a while loop. \n6. Write a Python Program to print below mentioned patterns.",
+            "char_count": 696,
+            "start_offset": 0,
+            "end_offset": 696
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
 import os
 import shutil
-
+from app.services.processing_service import DocumentProcessor
 router = APIRouter(
     prefix="/upload",
     tags=["Upload"]
@@ -18,7 +18,7 @@ async def upload_pdf(file: UploadFile = File(...)):
 
     with open(filepath, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
-
+    DocumentProcessor.process_pdf(filepath)
     return {
         "filename": file.filename,
         "message": "Upload Successful"

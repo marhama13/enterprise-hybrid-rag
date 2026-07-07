@@ -1,0 +1,57 @@
+{
+    "document": "Tuple_Practicals (1).pdf",
+    "total_pages": 3,
+    "total_chunks": 5,
+    "chunks": [
+        {
+            "id": "715cfdfa-63f2-486c-b8fe-f31a9fe16f98",
+            "document_name": "Tuple_Practicals (1).pdf",
+            "page_number": 1,
+            "chunk_number": 1,
+            "text": "Practical List: Tuples in Python\n1. Creating Tuples\nQ1: Write a Python program to create a tuple of numbers.\nmy_tuple = (1, 2, 3, 4, 5)\nprint(my_tuple)\nQ2: Create a tuple with mixed data types (int, string, float).\n2. Accessing Tuple Elements\nQ3: Write a program to access the first and last element of a tuple.\nQ4: Access elements from index 1 to 3 in a tuple.\n3. Basic Tuple Operations\nQ5: Concatenate two tuples and print the result.\nQ6: Repeat a tuple three times.\n4. Tuple Processing Functions\nQ7: Find the length of a tuple.\nQ8: Find the maximum and minimum value in a tuple.\n5. Nested Tuples\nQ9: Create a nested tuple and access an inner element.\nQ10: Write a program to iterate through a nested tuple.\nnested = ((1, 2), (3, 4), (5, 6))\nfor inner in nested:\n for val in inner:\n print(val)\n6. I",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "1abba178-5eba-4e8d-9d35-9b674dbc4f1c",
+            "document_name": "Tuple_Practicals (1).pdf",
+            "page_number": 1,
+            "chunk_number": 2,
+            "text": "ed tuple.\nnested = ((1, 2), (3, 4), (5, 6))\nfor inner in nested:\n for val in inner:\n print(val)\n6. Inserting, Modifying, and Deleting Elements in a Tuple\nQ11: Show how to insert an element into a tuple using conversion to list.\nQ12: Modify an element of a tuple using conversion to list.\nQ13: Delete an element from a tuple using conversion to list.\n# Creating tuples",
+            "char_count": 367,
+            "start_offset": 700,
+            "end_offset": 1067
+        },
+        {
+            "id": "81768673-e480-42d5-9aab-e0d6d171b256",
+            "document_name": "Tuple_Practicals (1).pdf",
+            "page_number": 2,
+            "chunk_number": 1,
+            "text": "t1 = () \nt2 = (10, 20, 30, 40) \nt3 = (\"apple\", 2, 4.5, True) \nt4 = (1, (2, 3), (4, 5)) \nprint(t1)\nprint(t2)\nprint(t3)\nprint(t4)\nt = (5, 10, 15, 20, 25)\nprint(\"First element:\", t[0])\nprint(\"Last element:\", t[-1])\nprint(\"Slice (2nd to 4th):\", t[1:4])\nt1 = (1, 2, 3)\nt2 = (4, 5, 6)\n# Concatenation\nprint(\"Concatenation:\", t1 + t2)\n# Repetition\nprint(\"Repetition:\", t1 * 3)\n# Membership\nprint(\"Is 3 in t1?\", 3 in t1)\nprint(\"Is 10 not in t2?\", 10 not in t2)\nt = (8, 3, 5, 1, 9,)\nprint(\"Length:\", len(t))\nprint(\"Max:\", max(t))\nprint(\"Min:\", min(t))\nprint(\"Sum:\", sum(t))\nprint(\"Sorted:\", sorted(t))\n#nested\nnested = (\"python\", (10, 20, 30), [\"a\", \"b\", \"c\"])\nprint(\"Whole tuple:\", nested)\nprint(\"Second element:\", nested[1])\nprint(\"Second element, second item:\", nested[1][1])\nprint(\"List inside tuple, firs",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "4ace727c-ba17-4ea8-94c1-ebd0d5dcb825",
+            "document_name": "Tuple_Practicals (1).pdf",
+            "page_number": 2,
+            "chunk_number": 2,
+            "text": "ent:\", nested[1])\nprint(\"Second element, second item:\", nested[1][1])\nprint(\"List inside tuple, first element:\", nested[2][0])",
+            "char_count": 126,
+            "start_offset": 700,
+            "end_offset": 826
+        },
+        {
+            "id": "de7d15d6-9e62-40cf-a76f-85c0207ca079",
+            "document_name": "Tuple_Practicals (1).pdf",
+            "page_number": 3,
+            "chunk_number": 1,
+            "text": "t = (10, 20, 30, 40)\nprint(\"Original tuple:\", t)\n# Convert to list\ntemp = list(t)\n# Insert\ntemp.insert(2, 25)\nprint(\"After insertion:\", tuple(temp))\n# Modify\ntemp[1] = 200\nprint(\"After modification:\", tuple(temp))\n# Delete\ndel temp[3]\nprint(\"After deletion:\", tuple(temp))",
+            "char_count": 272,
+            "start_offset": 0,
+            "end_offset": 272
+        }
+    ]
+}

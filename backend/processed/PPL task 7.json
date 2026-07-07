@@ -1,0 +1,97 @@
+{
+    "document": "PPL task 7.pdf",
+    "total_pages": 5,
+    "total_chunks": 9,
+    "chunks": [
+        {
+            "id": "cc843951-368d-454b-9886-eb308eb39df9",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 1,
+            "chunk_number": 1,
+            "text": "PPL task 7 \n \n1. Write a class Car with: Attributes: brand, model A method display_info() that prints brand \nand model. \nCode: \nclass Car: \n def __init__(self, brand, model): \n self.brand = brand \n self.model = model \n \n def display_info(self): \n print(f\"Brand: {self.brand}\") \n print(f\"Model: {self.model}\") \n \n# Example usage \nmy_car = Car(\"Toyota\", \"Corolla\") \nmy_car.display_info() \n \n \nOutput: \nBrand: Toyota \nModel: Corolla \n \n \n2. Create a class Circle with: Attribute: radius A method area() that returns the area of the \ncircle. \nCode: \nimport math \n \nclass Circle: \n def __init__(self, radius): \n self.radius = radius \n \n def area(self): \n return math.pi * self.radius ** 2 \n \n# Example usage \nc = Circle(5) \nprint(\"Area of the circle:\", c.area()) \n \n \nOutput: \nArea of the circle: 78.53981",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "9d813123-838e-4599-a672-78e44bb70c08",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 1,
+            "chunk_number": 2,
+            "text": "ge \nc = Circle(5) \nprint(\"Area of the circle:\", c.area()) \n \n \nOutput: \nArea of the circle: 78.53981633974483 \n \n \n3. Write a class BankAccount with: Attribute: balance (default 0) Methods: o \ndeposit(amount) → increases balance o withdraw(amount) → decreases balance if enough \nfunds are available o get_balance() → returns the current balance",
+            "char_count": 344,
+            "start_offset": 700,
+            "end_offset": 1044
+        },
+        {
+            "id": "4f53bd26-58d7-4e7a-8390-99cd689724e8",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 2,
+            "chunk_number": 1,
+            "text": "Code: \nclass BankAccount: \n def __init__(self): \n self.balance = 0 # Default balance is 0 \n \n def deposit(self, amount): \n if amount > 0: \n self.balance += amount \n print(f\"Deposited: {amount}\") \n else: \n print(\"Deposit amount must be positive.\") \n \n def withdraw(self, amount): \n if amount <= self.balance: \n self.balance -= amount \n print(f\"Withdrawn: {amount}\") \n else: \n print(\"Insufficient balance!\") \n \n def get_balance(self): \n return self.balance \n \n# Example usage \naccount = BankAccount() \naccount.deposit(1000) \naccount.withdraw(300) \nprint(\"Current balance:\", account.get_balance()) \n \n \nOutput: \nDeposited: 1000 \nWithdrawn: 300 \nCurrent balance: 700 \n \n \n4. Define a class Student with: Attributes: name, marks (list of integers) A method \naverage() that returns the average marks. \nCode",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "eb4b1277-37da-4b81-a49a-0fabf10af2a2",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 2,
+            "chunk_number": 2,
+            "text": "Attributes: name, marks (list of integers) A method \naverage() that returns the average marks. \nCode: \nclass Student: \n def __init__(self, name, marks): \n self.name = name \n self.marks = marks # List of integers \n \n def average(self): \n if self.marks: \n return sum(self.marks) / len(self.marks) \n else: \n return 0",
+            "char_count": 313,
+            "start_offset": 700,
+            "end_offset": 1013
+        },
+        {
+            "id": "612d71f2-4947-464d-86d7-33beb0de0c41",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 3,
+            "chunk_number": 1,
+            "text": "# Example usage \nstudent1 = Student(\"Alice\", [85, 90, 78, 92]) \nprint(f\"Average marks for {student1.name}:\", student1.average()) \n \n \nOutput: \nAverage marks for Alice: 86.25 \n \n \n 5. Calculator • Methods: • add(a, b) → returns sum • subtract(a, b) → returns difference • \nmultiply(a, b) → returns product • divide(a, b) → returns quotient if b ≠ 0 \nCode: \nclass Calculator: \n def add(self, a, b): \n return a + b \n \n def subtract(self, a, b): \n return a - b \n \n def multiply(self, a, b): \n return a * b \n \n def divide(self, a, b): \n if b != 0: \n return a / b \n else: \n return \"Error: Division by zero\" \n \n# Example usage \ncalc = Calculator() \n \nprint(\"Add: \", calc.add(10, 5)) \nprint(\"Subtract: \", calc.subtract(10, 5)) \nprint(\"Multiply: \", calc.multiply(10, 5)) \nprint(\"Divide: \", calc.divide(10, 0))",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "cb8f0c8a-52c9-40a8-94d0-3b306a727e31",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 3,
+            "chunk_number": 2,
+            "text": "c.subtract(10, 5)) \nprint(\"Multiply: \", calc.multiply(10, 5)) \nprint(\"Divide: \", calc.divide(10, 0)) \n \n \nOutput: \nAdd: 15 \nSubtract: 5 \nMultiply: 50 \nDivide: Error: Division by zero \n \n \n6. Employee • Attributes: name, salary • Methods: • get_details() → prints employee’s name \nand salary • apply_raise(percent) → increases salary by given percentage \nCode:",
+            "char_count": 359,
+            "start_offset": 700,
+            "end_offset": 1059
+        },
+        {
+            "id": "059165a7-5cf7-4e9c-bcaa-f20cee7facf6",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 4,
+            "chunk_number": 1,
+            "text": "class Employee: \n def __init__(self, name, salary): \n self.name = name \n self.salary = salary \n \n def get_details(self): \n print(f\"Name: {self.name}\") \n print(f\"Salary: {self.salary}\") \n \n def apply_raise(self, percent): \n increase = self.salary * (percent / 100) \n self.salary += increase \n print(f\"Salary increased by {percent}%. New salary: {self.salary}\") \n \n# Example usage \nemp = Employee(\"John Doe\", 50000) \nemp.get_details() \nemp.apply_raise(10) \n \n \nOutput: \nName: John Doe \nSalary: 50000 \nSalary increased by 10%. New salary: 55000.0 \n \n7. Library • Attributes: list of books (as a list of strings) • Methods: • add_book(title) → adds a \nbook • remove_book(title) → removes a book if it exists • display_books() → prints all \navailable books \nCode: \nclass Library: \n def __init__(self): \n s",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "0bfde5dc-d4f8-4717-8165-c977427fbbe7",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 4,
+            "chunk_number": 2,
+            "text": "sts • display_books() → prints all \navailable books \nCode: \nclass Library: \n def __init__(self): \n self.books = [] # List of book titles \n \n def add_book(self, title): \n self.books.append(title) \n print(f\"Book '{title}' added to the library.\") \n \n def remove_book(self, title): \n if title in self.books: \n self.books.remove(title) \n print(f\"Book '{title}' removed from the library.\") \n else: \n print(f\"Book '{title}' not found in the library.\") \n \n def display_books(self): \n if not self.books: \n print(\"The library is empty.\") \n else:",
+            "char_count": 535,
+            "start_offset": 700,
+            "end_offset": 1235
+        },
+        {
+            "id": "ed2da694-8a9b-4e9f-ac89-ae5b58f030fd",
+            "document_name": "PPL task 7.pdf",
+            "page_number": 5,
+            "chunk_number": 1,
+            "text": "print(\"Available books in the library:\") \n for book in self.books: \n print(f\"- {book}\") \n \n# Example usage \nlib = Library() \nlib.add_book(\"1984\") \nlib.add_book(\"To Kill a Mockingbird\") \nlib.display_books() \nlib.remove_book(\"1984\") \nlib.display_books() \n \n \nOutput: \nBook '1984' added to the library. \nBook 'To Kill a Mockingbird' added to the library. \nAvailable books in the library: \n- 1984 \n- To Kill a Mockingbird \nBook '1984' removed from the library. \nAvailable books in the library: \n- To Kill a Mockingbird",
+            "char_count": 514,
+            "start_offset": 0,
+            "end_offset": 514
+        }
+    ]
+}
