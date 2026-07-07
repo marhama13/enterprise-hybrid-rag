@@ -19,9 +19,13 @@ async def upload_pdf(file: UploadFile = File(...)):
     with open(filepath, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
     DocumentProcessor.process_pdf(filepath)
+    processed = DocumentProcessor.process_pdf(filepath)
+
     return {
         "filename": file.filename,
-        "message": "Upload Successful"
+        "message": "Upload Successful",
+        "pages": processed["total_pages"],
+        "chunks": processed["total_chunks"],
     }
 
 
