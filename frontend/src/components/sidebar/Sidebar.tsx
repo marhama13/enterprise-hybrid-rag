@@ -21,27 +21,31 @@ export default function Sidebar() {
         <SidebarItem
           icon={LayoutDashboard}
           title="Dashboard"
-          active
+          to="/"
         />
 
         <SidebarItem
           icon={Upload}
           title="Upload"
+          to="/upload"
         />
 
         <SidebarItem
           icon={MessageSquare}
           title="Chat"
+          to="/chat"
         />
 
         <SidebarItem
           icon={BarChart3}
           title="Analytics"
+          to="/analytics"
         />
 
         <SidebarItem
           icon={Settings}
           title="Settings"
+          to="/settings"
         />
 
       </div>
