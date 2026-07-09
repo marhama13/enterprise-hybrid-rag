@@ -1,0 +1,47 @@
+{
+    "document": "resume.pdf",
+    "total_pages": 1,
+    "total_chunks": 4,
+    "chunks": [
+        {
+            "id": "70e1be2a-1148-4b96-a9d8-1e5e6344de72",
+            "document_name": "resume.pdf",
+            "page_number": 1,
+            "chunk_number": 1,
+            "text": "MARHAMA \nSHAIKH\nB . T E C H C S & E ( 2 0 2 3 - 2 7 )\n+91 9998731782\nmarhamashaikh77@gmail.com\n971/1 Raikhad haweli Ahmedabad\nhttps://www.linkedin.com/in/mar\nhama-shaikh-b817012a7/\nP R O J E C T S\nP R O F I L E\nA motivated and detail-oriented B.Tech student with a strong\nacademic foundation and a genuine interest in technology\nand \ninnovation. \nPassionate \nabout \napplying \nclassroom\nknowledge \nto \nreal-world \nchallenges \nand \ncontinuously\nenhancing technical and problem-solving skills. Recognized\nfor adaptability, teamwork, and a positive approach to\nlearning, with a clear focus on contributing effectively to\norganizational success while advancing personal growth.\nChurn \nRisk \nProfileris \nan \nend-to-end \ncustomer \nretention\nintelligence platform designed for telecom operators and data\nteam",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "c18212d6-0176-4eae-9d4a-750eafe3f50c",
+            "document_name": "resume.pdf",
+            "page_number": 1,
+            "chunk_number": 2,
+            "text": " \nend-to-end \ncustomer \nretention\nintelligence platform designed for telecom operators and data\nteams. It transforms raw customer data into actionable churn\ninsights — no code required after deployment.\nThe platform trains and compares four machine learning models\n(Logistic Regression, Decision Tree, Random Forest, and XGBoost)\non the IBM Telco Churn dataset, then surfaces results through a\nclean, interactive dashboard. \nPersonalized \nTravel \nRecommendation \nSystem, \nalso \ncalled\nTravelMind. The main objective of this system is to help users plan\ntheir trips efficiently by providing personalized suggestions such as\nmust-visit places, hidden gems, restaurants, local food, cost\nestimation, and a day-wise itinerary. The user provides inputs like\ndestination country, budget, travel mood, numbe",
+            "char_count": 800,
+            "start_offset": 700,
+            "end_offset": 1500
+        },
+        {
+            "id": "a785ba49-386a-4f81-b785-9dd352c2fd5d",
+            "document_name": "resume.pdf",
+            "page_number": 1,
+            "chunk_number": 3,
+            "text": " a day-wise itinerary. The user provides inputs like\ndestination country, budget, travel mood, number of days, and user\nID. Based on these inputs, the system generates customized\nrecommendations.\nChurn Risk Profiler\nTravelMind\nE D U C A T I O N\nGLS UNIVERSITY - FET \nBachelor of Technology in Computer\nScience and Engineering (Pursuing)\n2023 - 2027\n2022 - 2023\nHIGHER SECONDARY (CLASS\n12TH)\nLittle Flower School - 62 %\nS K I L L S\nMathematical Aptitude\nQuantitative Reasoning\nTime Management\nLeadership\nEffective Communication\nMachine Learning\nAnalytical Thinking \nMultiple Programming\nlanguage(Python,Java, SQL, Flutter)\nCAD\nGit & GitHub\nL A N G U A G E S\nCertificate of Appreciation \nC E R T I F I C A T I O N S\nEnglish \nHindi\nGujarati (basic)\nKodexAI\nDeveloped a Flutter-Web and Node.js based plat",
+            "char_count": 800,
+            "start_offset": 1400,
+            "end_offset": 2200
+        },
+        {
+            "id": "c0db4357-3d2b-46be-a53f-6a1104fed05b",
+            "document_name": "resume.pdf",
+            "page_number": 1,
+            "chunk_number": 4,
+            "text": "C A T I O N S\nEnglish \nHindi\nGujarati (basic)\nKodexAI\nDeveloped a Flutter-Web and Node.js based platform that uses AI\nmodels (Llama, Mistral, Gemma) to generate optimized code, secure\ncode, explanations, and risk assessments.\nImplemented a sandboxed Python execution engine and security\nvalidation layer to detect unsafe code patterns and prevent\nmalicious execution.\nBuilt \na \nreal-time \nexecution \nvisualizer \nusing \nPython \ntracing\n(sys.settrace) to display line-by-line execution flow, variable states,\nand function call stacks.\nAWS Academy Cloud Foundation\nJava Certification",
+            "char_count": 580,
+            "start_offset": 2100,
+            "end_offset": 2680
+        }
+    ]
+}

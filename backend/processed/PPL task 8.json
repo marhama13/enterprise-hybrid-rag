@@ -1,0 +1,157 @@
+{
+    "document": "PPL task 8.pdf",
+    "total_pages": 8,
+    "total_chunks": 15,
+    "chunks": [
+        {
+            "id": "896ba180-15dc-48d8-9bb3-6ed3b531bd51",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 1,
+            "chunk_number": 1,
+            "text": "PPL task 8 \n \n1. Write a function cubesum() that accepts an integer and returns the sum of the cubes of \nindividual digits of that number. Use this function to make functions PrintArmstrong() and \nisArmstrong() to print Armstrong numbers and to find whether is an Armstrong number. \n \nCode: \ndef cubesum(n): \n return sum(int(d)**3 for d in str(n)) \n \ndef isArmstrong(n): \n return n == cubesum(n) \n \ndef PrintArmstrong(limit): \n for i in range(1, limit + 1): \n if isArmstrong(i): \n print(i) \n \n# Example usage \nprint(\"Armstrong numbers up to 500:\") \nPrintArmstrong(500) \nprint(\"Is 153 Armstrong?\", isArmstrong(153)) \n \n \nOutput: \nArmstrong numbers up to 500: \n1 \n153 \n370 \n371 \n407 \nIs 153 Armstrong? True \n \n \n2. Python program to find the power of a number using recursion \n \nCode: \ndef power(base, ",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "9609331e-9725-45ec-a15e-c6bb12997f34",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 1,
+            "chunk_number": 2,
+            "text": "True \n \n \n2. Python program to find the power of a number using recursion \n \nCode: \ndef power(base, exp): \n if exp == 0: \n return 1 \n return base * power(base, exp - 1) \n \n# Example \nprint(\"2^5 =\", power(2, 5)) \n \n \nOutput: \n2^5 = 32",
+            "char_count": 233,
+            "start_offset": 700,
+            "end_offset": 933
+        },
+        {
+            "id": "58ea70e3-b7f3-4e1d-bfee-6d1cc871310c",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 2,
+            "chunk_number": 1,
+            "text": "3. Write a function in python to implement the “Tower of Hanoi” for 3 disc. 4 \nCode: \ndef tower_of_hanoi(n, source, target, auxiliary): \n if n == 1: \n print(f\"Move disk 1 from {source} to {target}\") \n return \n tower_of_hanoi(n - 1, source, auxiliary, target) \n print(f\"Move disk {n} from {source} to {target}\") \n tower_of_hanoi(n - 1, auxiliary, target, source) \n \ntower_of_hanoi(3, 'A', 'C', 'B') \n \n \nOutput: \nMove disk 1 from A to C \nMove disk 2 from A to B \nMove disk 1 from C to B \nMove disk 3 from A to C \nMove disk 1 from B to A \nMove disk 2 from B to C \nMove disk 1 from A to C \n \n. \n4. Write a python function that takes input in the form of different list which contains \ninformation of employee name ,department and age. It should print the output of the required \nemployee in the below fo",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "ef8990c4-ad45-4441-8886-585b810ec9d0",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 2,
+            "chunk_number": 2,
+            "text": "loyee name ,department and age. It should print the output of the required \nemployee in the below format. (Use the concept of function in function to implement the \nsame) “Alice is 31 and is in IT Department” \n \nCode: \ndef print_employee(emp_list): \n def format_output(name, dept, age): \n print(f\"{name} is {age} and is in {dept} Department\") \n \n for emp in emp_list: \n name, dept, age = emp \n format_output(name, dept, age) \n \n# Example \nemployees = [ \n (\"Alice\", \"IT\", 31), \n (\"Bob\", \"HR\", 28) \n] \nprint_employee(employees) \n \n \nOutput: \nAlice is 31 and is in IT Department",
+            "char_count": 575,
+            "start_offset": 700,
+            "end_offset": 1275
+        },
+        {
+            "id": "5fd048f2-bdfd-4ae9-b2dc-5924af07655d",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 3,
+            "chunk_number": 1,
+            "text": "Bob is 28 and is in HR Department \n \n5. Write a Python program to solve a quadratic equation and find its roots. \nCode: \nimport cmath \n \ndef solve_quadratic(a, b, c): \n d = cmath.sqrt(b**2 - 4*a*c) \n root1 = (-b + d) / (2*a) \n root2 = (-b - d) / (2*a) \n print(\"Roots are:\", root1, \"and\", root2) \n \nsolve_quadratic(1, -3, 2) \n \n \nOutput: \nRoots are: (2+0j) and (1+0j) \n \n6. Write a Python program to swap the values of two variables. \nCode: \na = 5 \nb = 10 \na, b = b, a \nprint(\"a:\", a, \"b:\", b) \n \n \nOutput: \na: 10 b: 5 \n \n7. Write a Python program to generate and print a random number within a given range. \nCode: \nimport random \nprint(\"Random number between 1 and 100:\", random.randint(1, 100)) \n \n \nOutput: \nRandom number between 1 and 100: 72 \n \n8. Write a Python program to convert a distance fro",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "38692ebd-6f46-4cb0-a287-a163dea63e58",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 3,
+            "chunk_number": 2,
+            "text": "\nOutput: \nRandom number between 1 and 100: 72 \n \n8. Write a Python program to convert a distance from kilometers to miles. \nCode: \nkm = float(input(\"Enter distance in kilometers: \")) \nmiles = km * 0.621371 \nprint(\"Distance in miles:\", miles) \n \n \nOutput: \nEnter distance in kilometers: 20 \nDistance in miles: 12.42742",
+            "char_count": 317,
+            "start_offset": 700,
+            "end_offset": 1017
+        },
+        {
+            "id": "4d66c790-c4ca-45e6-8eb0-33dc77a7888c",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 4,
+            "chunk_number": 1,
+            "text": "In [ ]: \n \n9. Write a Python program to convert a temperature from Celsius to Fahrenheit. \nCode: \ncelsius = float(input(\"Enter temperature in Celsius: \")) \nfahrenheit = (celsius * 9/5) + 32 \nprint(\"Temperature in Fahrenheit:\", fahrenheit) \n \n \nOutput: \nEnter temperature in Celsius: 30 \nTemperature in Fahrenheit: 86.0 \n \n10. Write a Python program to display the current month's calendar. \nCode: \nimport calendar \nimport datetime \n \nnow = datetime.datetime.now() \nprint(calendar.month(now.year, now.month)) \n \n \nOutput: \n August 2025 \nMo Tu We Th Fr Sa Su \n 1 2 3 \n 4 5 6 7 8 9 10 \n11 12 13 14 15 16 17 \n18 19 20 21 22 23 24 \n25 26 27 28 29 30 31 \n \n 11. Write a Python program to determine if a number is positive, negative, or zero. \nCode: \nnum = float(input(\"Enter a number: \")) \nif num > 0: \n pr",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "b7021aab-992e-4510-afd4-f4b4920f2a07",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 4,
+            "chunk_number": 2,
+            "text": "ber is positive, negative, or zero. \nCode: \nnum = float(input(\"Enter a number: \")) \nif num > 0: \n print(\"Positive\") \nelif num < 0: \n print(\"Negative\") \nelse: \n print(\"Zero\") \n \n \nOutput: \nEnter a number: 7 \nPositive \n \n12. Write a Python program to check if a number is odd or even.",
+            "char_count": 282,
+            "start_offset": 700,
+            "end_offset": 982
+        },
+        {
+            "id": "f4ecadd0-dc75-4a6b-aabb-7f1eb164e90b",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 5,
+            "chunk_number": 1,
+            "text": "Code: \nnum = int(input(\"Enter a number: \")) \nprint(\"Even\" if num % 2 == 0 else \"Odd\") \n \n \nOutput: \nEnter a number: 7 \nOdd \n \n13. Write a Python program to determine if a year is a leap year. \nCode: \nyear = int(input(\"Enter a year: \")) \nif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0): \n print(\"Leap year\") \nelse: \n print(\"Not a leap year\") \n \n \nOutput: \nEnter a year: 2020 \nLeap year \n \n14. Write a Python program to check if a number is a prime number. \nCode: \nnum = int(input(\"Enter a number: \")) \nif num < 2: \n print(\"Not prime\") \nelse: \n for i in range(2, int(num**0.5) + 1): \n if num % i == 0: \n print(\"Not prime\") \n break \n else: \n print(\"Prime\") \n \n \nOutput: \nEnter a number: 5 \nPrime \n \n15. Write a Python program to print all prime numbers within a given interval. \nCode: \nstart",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "df7d1263-5b65-4240-be56-5c8d8de5c254",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 5,
+            "chunk_number": 2,
+            "text": "rime \n \n15. Write a Python program to print all prime numbers within a given interval. \nCode: \nstart = 10 \nend = 50 \nfor num in range(start, end + 1): \n if num > 1: \n for i in range(2, int(num**0.5)+1): \n if num % i == 0:",
+            "char_count": 221,
+            "start_offset": 700,
+            "end_offset": 921
+        },
+        {
+            "id": "c55a0934-cffb-42fb-90c4-7b7a5cd87ccb",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 6,
+            "chunk_number": 1,
+            "text": "break \n else: \n print(num, end=' ') \n \n \nOutput: \n11 13 17 19 23 29 31 37 41 43 47 \n \n16. Write a Python program to find and print the factorial of a given number. \nCode: \ndef factorial(n): \n if n == 0: \n return 1 \n return n * factorial(n - 1) \n \nprint(\"Factorial:\", factorial(5)) \n \n \nOutput: \nFactorial: 120 \n \n17. Write a Python program to display the multiplication table for a given number. \nCode: \nn = int(input(\"Enter a number: \")) \nfor i in range(1, 11): \n print(f\"{n} x {i} = {n*i}\") \n \n \nOutput: \nEnter a number: 7 \n7 x 1 = 7 \n7 x 2 = 14 \n7 x 3 = 21 \n7 x 4 = 28 \n7 x 5 = 35 \n7 x 6 = 42 \n7 x 7 = 49 \n7 x 8 = 56 \n7 x 9 = 63 \n7 x 10 = 70 \n \n 18. Write a Python program to generate and print the Fibonacci sequence up to a given \nnumber of terms. \nCode: \nterms = int(input(\"Enter number of term",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "f6106e33-5412-47a1-95e1-2f06c3b39e23",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 6,
+            "chunk_number": 2,
+            "text": "e Fibonacci sequence up to a given \nnumber of terms. \nCode: \nterms = int(input(\"Enter number of terms: \")) \na, b = 0, 1 \nfor _ in range(terms): \n print(a, end=' ')",
+            "char_count": 163,
+            "start_offset": 700,
+            "end_offset": 863
+        },
+        {
+            "id": "e561eab1-51cc-41ab-80f4-f48f67146883",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 7,
+            "chunk_number": 1,
+            "text": "a, b = b, a + b \n \n \nOutput: \nEnter number of terms: 5 \n0 1 1 2 3 \n \n19. Write a Python program to find and print all Armstrong numbers within a given interval. \nCode: \nfor num in range(100, 1000): \n digits = [int(d) for d in str(num)] \n if sum(d**3 for d in digits) == num: \n print(num) \n \n \nOutput: \n153 \n370 \n371 \n407 \n \n20. Write a Python program to find and print the sum of the first ten natural numbers. \nCode: \nprint(\"Sum:\", sum(range(1, 11))) \n \n \nOutput: \nSum: 55 \n \n21. Write a Python program to reverse and print a given string. \nCode: \ns = input(\"Enter a string: \") \nprint(\"Reversed:\", s[::-1]) \n \n \nOutput: \nEnter a string: mahi \nReversed: iham \n \n22. Write a Python program to calculate and print the sum of the first ten natural numbers. \nCode: \ntotal = 0 \nfor i in range(1, 11): \n to",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "b47dc818-851e-4af8-bdcc-cc4c231e00c9",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 7,
+            "chunk_number": 2,
+            "text": "e and print the sum of the first ten natural numbers. \nCode: \ntotal = 0 \nfor i in range(1, 11): \n total += i \nprint(\"Sum of first 10 natural numbers:\", total) \n \n \nOutput:",
+            "char_count": 171,
+            "start_offset": 700,
+            "end_offset": 871
+        },
+        {
+            "id": "bfb9de42-dcf4-413b-a1c2-063942ed7850",
+            "document_name": "PPL task 8.pdf",
+            "page_number": 8,
+            "chunk_number": 1,
+            "text": "Sum of first 10 natural numbers: 55",
+            "char_count": 35,
+            "start_offset": 0,
+            "end_offset": 35
+        }
+    ]
+}

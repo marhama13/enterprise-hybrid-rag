@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-
+import {
+  FileText,
+  Boxes,
+  Brain,
+  Bot,
+  MessageCircle,
+  Clock,
+} from "lucide-react";
 import MainLayout from "../layouts/MainLayout";
 
 import { getAnalytics } from "../services/analyticsService";
@@ -10,12 +17,9 @@ import DocumentsTable from "../components/analytics/DocumentsTable";
 import SystemStatus from "../components/analytics/SystemStatus";
 
 import AnalyticsCharts from "../components/analytics/AnalyticsCharts";
-import {
-  FileText,
-  Boxes,
-  Brain,
-  Bot,
-} from "lucide-react";
+
+
+
 
 export default function Analytics() {
 
@@ -118,6 +122,16 @@ export default function Analytics() {
             value={analytics.model}
             icon={Bot}
           />
+          <StatCard
+            title="Queries"
+            value={analytics.queries}
+            icon={MessageCircle}
+        />
+        <StatCard
+            title="Avg Response"
+            value={`${analytics.average_response_time}s`}
+            icon={Clock}
+        />
 
         </div>
 

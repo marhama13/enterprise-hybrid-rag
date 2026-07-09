@@ -7,6 +7,11 @@ from app.services.retrieval.hybrid_service import HybridService
 from app.services.prompt_builder import PromptBuilder
 from app.services.llm_service import LLMService
 
+import time
+
+from app.services.analytics_state import AnalyticsState
+
+
 router = APIRouter(
     prefix="/chat",
     tags=["Chat"],
@@ -39,14 +44,19 @@ def chat(request: ChatRequest):
         )
 
         if not results:
+
+            response_time = round(
+                time.perf_counter() - start_time,
+                2,
+            )
+
+            AnalyticsState.add_query(response_time)
+
             return {
                 "question": request.question,
                 "answer": "I couldn't find this information in the uploaded documents.",
                 "sources": [],
-                "response_time": round(
-                    time.perf_counter() - start_time,
-                    2,
-                ),
+                "response_time": response_time,
             }
 
         prompt = PromptBuilder.build(
@@ -74,6 +84,7 @@ def chat(request: ChatRequest):
             time.perf_counter() - start_time,
             2,
         )
+        AnalyticsState.add_query(response_time)
 
         print("=" * 60)
         print("Question :", request.question)

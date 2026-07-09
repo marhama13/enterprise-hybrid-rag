@@ -13,6 +13,8 @@ export interface AnalyticsResponse {
   documents: number;
   chunks: number;
   embeddings: number;
+  queries: number;
+  average_response_time: number;
   model: string;
 
   system_status: {

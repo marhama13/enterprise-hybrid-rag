@@ -5,6 +5,8 @@ from fastapi import APIRouter
 
 from app.services.llm_service import LLMService
 
+from app.services.analytics_state import AnalyticsState
+
 router = APIRouter(
     prefix="/analytics",
     tags=["Analytics"],
@@ -39,17 +41,25 @@ def get_analytics():
         )
 
     return {
-        "documents": total_documents,
-        "chunks": total_chunks,
-        "embeddings": total_chunks,
 
-        "model": LLMService.MODEL_NAME,
+    "documents": total_documents,
 
-        "system_status": {
-            "fastapi": "Running",
-            "ollama": "Connected",
-            "chromadb": "Healthy",
-        },
+    "chunks": total_chunks,
 
-        "documents_detail": document_stats,
-    }
+    "embeddings": total_chunks,
+
+    "queries": AnalyticsState.question_count,
+
+    "average_response_time":
+        AnalyticsState.average_response_time(),
+
+    "model": LLMService.MODEL_NAME,
+
+    "system_status": {
+        "fastapi": "Running",
+        "ollama": "Connected",
+        "chromadb": "Healthy",
+    },
+
+    "documents_detail": document_stats,
+}
