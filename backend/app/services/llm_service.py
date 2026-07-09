@@ -1,28 +1,27 @@
-import ollama
+import os
+
+from app.services.groq_service import GroqService
+from app.services.ollama_service import OllamaService
 
 
 class LLMService:
 
-    MODEL_NAME = "llama3.2"
+    PROVIDER = os.getenv("LLM_PROVIDER", "groq").lower()
+
+    # <-- ADD THIS
+    MODEL_NAME = (
+        os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+        if PROVIDER == "groq"
+        else os.getenv("OLLAMA_MODEL", "llama3.2")
+    )
 
     @classmethod
-    def generate(cls, prompt: str) -> str:
-        """
-        Send prompt to Ollama and return the generated response.
-        """
+    def generate(cls, prompt: str):
 
-        response = ollama.chat(
-    model=cls.MODEL_NAME,
-    messages=[
-        {
-            "role": "user",
-            "content": prompt,
-        }
-    ],
-    options={
-        "temperature": 0.1,
-        "num_predict": 180,
-    },
-)
+        if cls.PROVIDER == "groq":
+            return GroqService.generate(prompt)
 
-        return response["message"]["content"]
+        elif cls.PROVIDER == "ollama":
+            return OllamaService.generate(prompt)
+
+        raise ValueError(f"Unsupported provider: {cls.PROVIDER}")

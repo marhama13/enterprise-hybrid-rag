@@ -1,7 +1,7 @@
 interface Props {
   status: {
     fastapi: string;
-    ollama: string;
+    llm_provider: string;
     chromadb: string;
   };
 }
@@ -9,7 +9,7 @@ interface Props {
 export default function SystemStatus({ status }: Props) {
   const systems = [
     { name: "FastAPI", value: status.fastapi },
-    { name: "Ollama", value: status.ollama },
+    { name: "LLM Provider", value: status.llm_provider },
     { name: "ChromaDB", value: status.chromadb },
   ];
 

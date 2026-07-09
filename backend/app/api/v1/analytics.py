@@ -57,7 +57,7 @@ def get_analytics():
 
     "system_status": {
         "fastapi": "Running",
-        "ollama": "Connected",
+        "llm_provider": LLMService.PROVIDER,
         "chromadb": "Healthy",
     },
 

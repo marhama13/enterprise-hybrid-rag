@@ -18,16 +18,16 @@ def get_settings():
 
         "system": {
             "fastapi": "Running",
-            "ollama": "Connected",
+            "llm_provider": LLMService.PROVIDER,
             "chromadb": "Healthy",
         },
 
         "version": "1.0.0",
 
-        "frameworks": [
+       "frameworks": [
             "FastAPI",
             "React",
-            "Ollama",
             "ChromaDB",
+            "Groq" if LLMService.PROVIDER == "groq" else "Ollama",
         ],
     }

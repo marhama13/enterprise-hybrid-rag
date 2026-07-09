@@ -19,6 +19,10 @@ backend/processed/
 # Node
 frontend/node_modules/
 
+# IDE
+.vscode/
+.idea/
+
 # OS
 .DS_Store
 Thumbs.db

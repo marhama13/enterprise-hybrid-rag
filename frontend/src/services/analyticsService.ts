@@ -19,7 +19,7 @@ export interface AnalyticsResponse {
 
   system_status: {
     fastapi: string;
-    ollama: string;
+    llm_provider: string;
     chromadb: string;
   };
 

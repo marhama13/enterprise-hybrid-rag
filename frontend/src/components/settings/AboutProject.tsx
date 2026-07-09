@@ -39,7 +39,7 @@ export default function AboutProject() {
         <div className="flex justify-between">
           <span>LLM</span>
           <span className="text-cyan-400">
-            Ollama
+            Local (Ollama) / Cloud (Groq)
           </span>
         </div>
 

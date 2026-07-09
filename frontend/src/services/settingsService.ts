@@ -11,7 +11,7 @@ export interface SettingsResponse {
 
   system: {
     fastapi: string;
-    ollama: string;
+     llm_provider: string;
     chromadb: string;
   };
 

@@ -1,7 +1,7 @@
 interface Props {
   system?: {
     fastapi: string;
-    ollama: string;
+    llm_provider: string;
     chromadb: string;
   };
 }
@@ -18,7 +18,7 @@ export default function SystemStatus({ system }: Props) {
 
     {
       name: "Ollama",
-      status: system?.ollama ?? "Unknown",
+      status: system?.llm_provider ?? "Unknown",
       color: "text-green-400",
     },
 
