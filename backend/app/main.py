@@ -6,6 +6,7 @@ from app.core.logging import logger
 from app.api.v1.upload import router as upload_router
 from app.api.v1.chat import router as chat_router
 from app.api.v1 import analytics
+from app.api.v1 import system_settings
 logger.info("Enterprise Hybrid RAG API Started Successfully")
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -36,6 +37,10 @@ app.include_router(
 )
 app.include_router(
     analytics.router,
+    prefix="/api/v1",
+)
+app.include_router(
+    system_settings.router,
     prefix="/api/v1",
 )
 
