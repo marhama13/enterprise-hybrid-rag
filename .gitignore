@@ -1,14 +1,25 @@
 # Python
 venv/
+backend/venv/
 __pycache__/
 *.pyc
 
-# Environment variables
+# Environment
 .env
+backend/.env
+frontend/.env
 
-# VS Code
-.vscode/
+# Chroma
+backend/chroma_db/
 
-# OS files
+# Uploads
+backend/uploads/
+backend/processed/
+
+# Node
+frontend/node_modules/
+
+# OS
 .DS_Store
 Thumbs.db
+*.lnk
