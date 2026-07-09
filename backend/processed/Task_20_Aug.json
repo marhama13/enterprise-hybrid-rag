@@ -1,0 +1,37 @@
+{
+    "document": "Task_20_Aug.pdf",
+    "total_pages": 2,
+    "total_chunks": 3,
+    "chunks": [
+        {
+            "id": "f10afd97-b96c-4e63-9c49-28f387b4251a",
+            "document_name": "Task_20_Aug.pdf",
+            "page_number": 1,
+            "chunk_number": 1,
+            "text": "GLS University\nFaculty of Engineering and Technology\nB.Tech(CS&E)\nFunctions \n1. Write a class Car with:\n\nAttributes: brand, model\n\nA method display_info() that prints brand and model.\n2. Create a class Circle with:\n\nAttribute: radius\n\nA method area() that returns the area of the circle.\n3. Write a class BankAccount with:\n\nAttribute: balance (default 0)\n\nMethods:\no\ndeposit(amount) → increases balance\no\nwithdraw(amount) → decreases balance if enough funds are available\no\nget_balance() → returns the current balance\n4. Define a class Student with:\n\nAttributes: name, marks (list of integers)\n\nA method average() that returns the average marks.\n 5. Calculator\n•\nMethods:\n•\nadd(a, b) → returns sum\n•\nsubtract(a, b) → returns difference\n•\nmultiply(a, b) → returns product\n•\ndivide(a, b) → retu",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "b27ae75a-86d1-4ec3-8bea-0c0bfc426e2d",
+            "document_name": "Task_20_Aug.pdf",
+            "page_number": 1,
+            "chunk_number": 2,
+            "text": "s sum\n•\nsubtract(a, b) → returns difference\n•\nmultiply(a, b) → returns product\n•\ndivide(a, b) → returns quotient if b ≠ 0\n 6. Employee\n•\nAttributes: name, salary\n•\nMethods:\n•\nget_details() → prints employee’s name and salary",
+            "char_count": 224,
+            "start_offset": 700,
+            "end_offset": 924
+        },
+        {
+            "id": "41298e6a-eb31-43fe-af85-e52aab3d0a6d",
+            "document_name": "Task_20_Aug.pdf",
+            "page_number": 2,
+            "chunk_number": 1,
+            "text": "•\napply_raise(percent) → increases salary by given percentage\n 7. Library\n•\nAttributes: list of books (as a list of strings)\n•\nMethods:\n•\nadd_book(title) → adds a book\n•\nremove_book(title) → removes a book if it exists\n•\ndisplay_books() → prints all available books",
+            "char_count": 265,
+            "start_offset": 0,
+            "end_offset": 265
+        }
+    ]
+}

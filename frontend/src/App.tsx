@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Upload from "./pages/Upload";
 import Chat from "./pages/Chat";
 import NotFound from "./pages/NotFound";
-
+import Analytics from "./pages/Analytics";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +15,7 @@ function App() {
         <Route path="/upload" element={<Upload />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/analytics" element={<Analytics />} />
       </Routes>
     </BrowserRouter>
   );

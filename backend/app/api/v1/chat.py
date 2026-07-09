@@ -15,9 +15,15 @@ router = APIRouter(
 hybrid = HybridService()
 
 
+class ChatMessage(BaseModel):
+    role: str
+    content: str
+
+
 class ChatRequest(BaseModel):
     question: str
     document_name: str | None = None
+    history: list[ChatMessage] = []
 
 
 @router.post("/")
@@ -46,6 +52,7 @@ def chat(request: ChatRequest):
         prompt = PromptBuilder.build(
             question=request.question,
             contexts=results,
+            history=request.history,
         )
 
         answer = LLMService.generate(prompt)

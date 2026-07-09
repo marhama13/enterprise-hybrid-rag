@@ -1,0 +1,57 @@
+{
+    "document": "Assignment_2.pdf",
+    "total_pages": 2,
+    "total_chunks": 5,
+    "chunks": [
+        {
+            "id": "2431d3ae-95ae-4673-957a-8d6a0b4f77b7",
+            "document_name": "Assignment_2.pdf",
+            "page_number": 1,
+            "chunk_number": 1,
+            "text": "Faculty of Engineering and Technology \nB.Tech (CS&E) \nMOOC2 – Core Python \n 1: Write a Python program to: \n- Accept a number from the user \n- Display its absolute value, square, and cube \n- Round it to 2 decimal places \nnum = float(input(\"Enter a number: \")) \nprint(\"Absolute value:\", abs(num)) \nprint(\"Square:\", pow(num, 2)) \nprint(\"Cube:\", pow(num, 3)) \nprint(\"Rounded (2 decimal places):\", round(num, 2)) \n2: Write a Python program to: \n- Compute square root, floor, and ceiling of a number \n- Calculate log base 10 of a number \nimport math \n \nnum = float(input(\"Enter a number: \")) \nprint(\"Square root:\", math.sqrt(num)) \nprint(\"Floor value:\", math.floor(num)) \nprint(\"Ceiling value:\", math.ceil(num)) \nprint(\"Log base 10:\", math.log10(num)) \n3: Write a program to: \n- Take an angle in degrees as",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "c9e6d90b-f541-41af-880d-487262be4b76",
+            "document_name": "Assignment_2.pdf",
+            "page_number": 1,
+            "chunk_number": 2,
+            "text": "num)) \nprint(\"Log base 10:\", math.log10(num)) \n3: Write a program to: \n- Take an angle in degrees as input \n- Convert it to radians \n- Find its sine, cosine, and tangent \nimport math \n \ndeg = float(input(\"Enter angle in degrees: \")) \nrad = math.radians(deg) \nprint(\"Sine:\", math.sin(rad))",
+            "char_count": 288,
+            "start_offset": 700,
+            "end_offset": 988
+        },
+        {
+            "id": "6cc4b71b-2d4e-440e-81a3-6ddfaf077095",
+            "document_name": "Assignment_2.pdf",
+            "page_number": 2,
+            "chunk_number": 1,
+            "text": "print(\"Cosine:\", math.cos(rad)) \nprint(\"Tangent:\", math.tan(rad)) \n4: Write a program to: \n- Calculate the factorial of a number \n- Find the greatest common divisor (GCD) of two numbers \nimport math \nnum = int(input(\"Enter a number for factorial: \")) \nprint(\"Factorial:\", math.factorial(num)) \n \na = int(input(\"Enter first number for GCD: \")) \nb = int(input(\"Enter second number: \")) \nprint(\"GCD:\", math.gcd(a, b)) \n5: Write a program that: \n- Generates a random number between 1 and 100 \nimport random \nprint(\"Random number (1 to 100):\", random.randint(1, 100)) \nTrivia Time : \n1. Create a simple Python program that uses math functions to create a fun number-\nguessing game.This game generates a random number and asks the player to guess it. It \nuses math.log2() to tell the player how many guesse",
+            "char_count": 800,
+            "start_offset": 0,
+            "end_offset": 800
+        },
+        {
+            "id": "04330a87-290e-4bac-996a-4c97f796c7d0",
+            "document_name": "Assignment_2.pdf",
+            "page_number": 2,
+            "chunk_number": 2,
+            "text": "ndom number and asks the player to guess it. It \nuses math.log2() to tell the player how many guesses they should take ideally. \n1. Objective: \nGuess the secret number chosen randomly by the computer within a range of 1 \nand 100 (inclusive). \n2. Guess Limit: \nYou are encouraged to guess the number in no more than log₂(N) attempts, where \nN is the size of the range. For example, for 1–100, this means about 7 guesses. \n3. Feedback After Each Guess: \no If your guess is too low, you’ll be told to guess higher. \no If your guess is too high, you’ll be told to guess lower. \no If your guess is correct, you win! \n4. Input Rules: \no Enter only whole numbers (integers) within the specified range.Invalid \ninput will prompt a warning, and the game will ask you to try again.",
+            "char_count": 771,
+            "start_offset": 700,
+            "end_offset": 1471
+        },
+        {
+            "id": "86d3c124-bc91-405a-8f5a-08d8fd59ca98",
+            "document_name": "Assignment_2.pdf",
+            "page_number": 2,
+            "chunk_number": 3,
+            "text": "d \ninput will prompt a warning, and the game will ask you to try again.",
+            "char_count": 71,
+            "start_offset": 1400,
+            "end_offset": 1471
+        }
+    ]
+}
