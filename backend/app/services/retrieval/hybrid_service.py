@@ -25,12 +25,14 @@ class HybridService:
             top_k,
             document_name,
         )
+        print("Vector results:", len(vector_results["documents"][0]))
 
         bm25_results = self.bm25.search(
             query,
             top_k,
             document_name,
         )
+        print("BM25 results:", len(bm25_results))
 
         merged = []
 
@@ -85,8 +87,10 @@ class HybridService:
                 )
 
         reranked = self.reranker.rerank(
-    query=query,
-    results=merged,
-)
+            query=query,
+            results=merged,
+        )
+        print("Merged results:", len(merged))
+        print("Reranked results:", len(reranked))
 
         return reranked
