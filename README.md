@@ -184,7 +184,27 @@ VITE_API_URL=https://your-backend-url
 
 ## 📸 Screenshots
 
-Coming Soon
+## 📸 Screenshots
+
+### Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+### Upload
+
+![Upload](assets/upload.png)
+
+### Chat
+
+![Chat](assets/chat.png)
+
+### Analytics
+
+![Analytics](assets/analytics.png)
+
+### Settings
+
+![Settings](assets/settings.png)
 
 ---
 
