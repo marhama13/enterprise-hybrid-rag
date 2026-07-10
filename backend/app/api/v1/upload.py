@@ -18,8 +18,15 @@ async def upload_pdf(file: UploadFile = File(...)):
 
     with open(filepath, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
-    DocumentProcessor.process_pdf(filepath)
+    
     processed = DocumentProcessor.process_pdf(filepath)
+
+    from app.services.indexing_service import IndexingService
+
+    processor = IndexingService()
+    processor.index_processed_file(
+        f"processed/{os.path.splitext(file.filename)[0]}.json"
+    )
 
     return {
         "filename": file.filename,

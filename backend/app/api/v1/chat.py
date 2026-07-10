@@ -17,7 +17,6 @@ router = APIRouter(
     tags=["Chat"],
 )
 
-hybrid = HybridService()
 
 
 class ChatMessage(BaseModel):
@@ -37,6 +36,8 @@ def chat(request: ChatRequest):
     start_time = time.perf_counter()
 
     try:
+
+        hybrid = HybridService()
 
         results = hybrid.search(
             query=request.question,
