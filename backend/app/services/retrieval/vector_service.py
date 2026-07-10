@@ -18,8 +18,8 @@ class  VectorService:
             settings=Settings(anonymized_telemetry=False),
         )
 
-        self.collection = self.client.get_collection(
-            "documents"
+        self.collection = self.client.get_or_create_collection(
+            name="documents"
         )
 
     def search(

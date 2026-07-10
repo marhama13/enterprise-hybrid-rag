@@ -17,7 +17,7 @@ export default function SystemStatus({ system }: Props) {
     },
 
     {
-      name: "Ollama",
+      name: "LLM",
       status: system?.llm_provider ?? "Unknown",
       color: "text-green-400",
     },
