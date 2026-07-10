@@ -42,6 +42,12 @@ def chat(request: ChatRequest):
             query=request.question,
             document_name=request.document_name,
         )
+        print("Retrieved chunks:", len(results))
+
+        for i, r in enumerate(results):
+            print(f"\nChunk {i+1}")
+            print(r["metadata"])
+            print(r["text"][:200])
 
         if not results:
 
