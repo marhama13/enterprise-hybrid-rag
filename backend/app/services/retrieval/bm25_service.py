@@ -38,14 +38,23 @@ class BM25Service:
             for doc in self.documents
         ]
 
+        # ✅ Prevent crash when no documents exist
+        if len(tokenized_docs) == 0:
+            self.bm25 = None
+            return
+
         self.bm25 = BM25Okapi(tokenized_docs)
 
     def search(
-    self,
-    query,
-    top_k=5,
-    document_name=None,
-):
+        self,
+        query,
+        top_k=5,
+        document_name=None,
+    ):
+
+        # ✅ No indexed documents yet
+        if self.bm25 is None:
+            return []
 
         tokenized_query = query.lower().split()
 
@@ -63,6 +72,7 @@ class BM25Service:
 
             if score <= 0:
                 continue
+
             if (
                 document_name
                 and self.metadata[index]["document_name"] != document_name
@@ -79,4 +89,5 @@ class BM25Service:
 
             if len(results) >= top_k:
                 break
+
         return results
